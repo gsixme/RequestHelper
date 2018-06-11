@@ -15,15 +15,6 @@ $ gem install cocoapods
 
 ## Installation
 
-APIRequestsHelperGSIX is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'APIRequestsHelperGSIX'
-```
-
-## Installation
-
 ```ruby
 pod 'APIRequestsHelperGSIX', :git => 'https://dstojcev@bitbucket.org/dstojcev/apirequestshelpergsix.git'
 ```
