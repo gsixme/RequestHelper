@@ -42,8 +42,6 @@ You are now ready to add your imports into your Bridging.h file for the pods you
 ```
 ## Usage
 
-### Create instance
-
 ```objective-c
 [APIGetRequest get:headerParams endpointURL:strUrl success:^(NSDictionary *response) {
     // Use the response.
