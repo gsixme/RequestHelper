@@ -1,6 +1,6 @@
 //
 //  APIDeleteRequest.m
-//  Grouper
+//  GSIX
 //
 //  Created by Dimitar Stojcev on 6/11/18.
 //  Copyright © 2018 Bosko Petreski. All rights reserved.
