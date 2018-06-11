@@ -61,7 +61,7 @@ APIGetRequest.get(headers, endpointURL: endpointUrl, success: { ([String : Any?]
 
 ## Author
 
-dimitar@gsix.me, dimitar@gsix.me
+dimitar@gsix.me
 
 ## License
 
