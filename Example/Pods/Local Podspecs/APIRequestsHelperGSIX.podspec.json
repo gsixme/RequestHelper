@@ -1,0 +1,22 @@
+{
+  "name": "APIRequestsHelperGSIX",
+  "version": "0.1.0",
+  "summary": "A short description of APIRequestsHelperGSIX.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/dimitar@gsix.me/APIRequestsHelperGSIX",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "dimitar@gsix.me": "dimitar@gsix.me"
+  },
+  "source": {
+    "git": "https://github.com/dimitar@gsix.me/APIRequestsHelperGSIX.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "APIRequestsHelperGSIX/Classes/**/*"
+}

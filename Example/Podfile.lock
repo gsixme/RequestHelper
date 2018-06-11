@@ -1,0 +1,16 @@
+PODS:
+  - APIRequestsHelperGSIX (0.1.0)
+
+DEPENDENCIES:
+  - APIRequestsHelperGSIX (from `../`)
+
+EXTERNAL SOURCES:
+  APIRequestsHelperGSIX:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  APIRequestsHelperGSIX: 6c95a3b1a95794289ff6e00ec3e34ab801b5d0e3
+
+PODFILE CHECKSUM: c12b4f5cf347784456968d601a290bfc5c6644a0
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,6 @@
+framework module APIRequestsHelperGSIX {
+  umbrella header "APIRequestsHelperGSIX-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'APIRequestsHelperGSIX_Example' do
+  pod 'APIRequestsHelperGSIX', :path => '../'
+
+  target 'APIRequestsHelperGSIX_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

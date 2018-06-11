@@ -1,0 +1,6 @@
+framework module Pods_APIRequestsHelperGSIX_Example {
+  umbrella header "Pods-APIRequestsHelperGSIX_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
