@@ -1,10 +1,5 @@
 # APIRequestsHelperGSIX
 
-[![CI Status](https://img.shields.io/travis/dimitar@gsix.me/APIRequestsHelperGSIX.svg?style=flat)](https://travis-ci.org/dimitar@gsix.me/APIRequestsHelperGSIX)
-[![Version](https://img.shields.io/cocoapods/v/APIRequestsHelperGSIX.svg?style=flat)](https://cocoapods.org/pods/APIRequestsHelperGSIX)
-[![License](https://img.shields.io/cocoapods/l/APIRequestsHelperGSIX.svg?style=flat)](https://cocoapods.org/pods/APIRequestsHelperGSIX)
-[![Platform](https://img.shields.io/cocoapods/p/APIRequestsHelperGSIX.svg?style=flat)](https://cocoapods.org/pods/APIRequestsHelperGSIX)
-
 ## Installation with CocoaPods
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like AFNetworking in your projects. See the ["Getting Started" guide for more information](https://github.com/AFNetworking/AFNetworking/wiki/Getting-Started-with-AFNetworking). You can install it with the following command:
