@@ -60,18 +60,10 @@ You are now ready to add your imports into your Bridging-Header.h file for the p
 
 ```objective-c
 [APIGetRequest get:headerParams endpointURL:strUrl success:^(NSDictionary *response) {
-if([response[@"error"] boolValue]){
-failed([[[response valueForKeyPath:@"data.messages"] allObjects] componentsJoinedByString:@"\n"]);
-return;
-}
-success(response);
+    // Use the response.
 } failed:^(NSError *error) {
-if ([error.userInfo[@"NSLocalizedDescription"] isEqualToString:@"The Internet connection appears to be offline."]) {
-failed(@"Немате интернет пристап.");
-return;
-}
-failed(error.userInfo[@"NSLocalizedDescription"]);
-} timeout:-1];
+    // Handle the error.
+} timeout:10];
 ```
 ```swift
 
