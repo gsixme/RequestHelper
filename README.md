@@ -11,7 +11,7 @@ $ gem install cocoapods
 ## Installation
 
 ```ruby
-pod 'APIRequestsHelperGSIX', :git => 'https://dstojcev@bitbucket.org/dstojcev/apirequestshelpergsix.git'
+pod 'RequestsHelper', :git => 'https://github.com/dstojchev/RequestHelper.git'
 ```
 
 Then, run the following command:
@@ -36,7 +36,7 @@ You are now ready to add your imports into your Bridging.h file for the pods you
 #ifndef Bridging_h
 #define Bridging_h
 
-#import <APIRequestsHelperGSIX/APIGetRequest.h>
+#import <RequestsHelper/APIGetRequest.h>
 
 #endif /* Bridging_h */
 ```
@@ -63,4 +63,4 @@ dimitar@gsix.me
 
 ## License
 
-APIRequestsHelperGSIX is available under the MIT license. See the LICENSE file for more info.
+RequestsHelper is available under the MIT license. See the LICENSE file for more info.
