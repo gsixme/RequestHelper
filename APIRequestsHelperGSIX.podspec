@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'RequestsHelper'
   s.version          = '0.1.0'
-  s.summary          = 'Tuka dime sredi go ova'
+  s.summary          = 'Framework for iOS networking.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Isto i ova samo pogolem text neka bide ne vala malecok vazli?
+This framework is Objective C based, and it is make to help iOS networking.
                        DESC
 
   s.homepage         = 'https://github.com/dstojchev/RequestHelper'
