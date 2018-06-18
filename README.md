@@ -11,7 +11,7 @@ $ gem install cocoapods
 ## Installation
 
 ```ruby
-pod 'RequestsHelper', :git => 'https://github.com/dstojchev/RequestHelper.git'
+pod 'RequestsHelper', :git => 'https://github.com/gsixme/RequestHelper.git'
 ```
 
 Then, run the following command:
