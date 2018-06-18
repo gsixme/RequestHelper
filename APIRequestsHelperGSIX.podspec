@@ -7,10 +7,10 @@ Pod::Spec.new do |s|
   This framework is Objective C based, and it is make to help iOS networking.
                        DESC
 
-  s.homepage         = 'https://github.com/dstojchev/RequestHelper'
+  s.homepage         = 'https://github.com/gsixme/RequestHelper'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'dimitar@gsix.me' => 'dimitar@gsix.me' }
-  s.source           = { :git => 'https://github.com/dstojchev/RequestHelper.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/gsixme/RequestHelper.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 
