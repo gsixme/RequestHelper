@@ -1,4 +1,4 @@
-# APIRequestsHelperGSIX
+# RequestsHelper
 
 ## Installation with CocoaPods
 
