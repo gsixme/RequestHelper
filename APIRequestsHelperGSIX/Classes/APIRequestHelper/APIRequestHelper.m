@@ -3,7 +3,7 @@
 //  Grouper
 //
 //  Created by Dimitar Stojcev on 6/11/18.
-//  Copyright © 2018 Bosko Petreski. All rights reserved.
+//  Copyright © 2018 GSIX. All rights reserved.
 //
 
 #import "APIRequestHelper.h"
