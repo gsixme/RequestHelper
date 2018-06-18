@@ -20,7 +20,7 @@ Then, run the following command:
 pod install
 ```
 
-## If using Swift you need to add Bridge Header
+## If you are using Swift you need to add Bridge Header
 ### Add new header file
 Click on File -> New -> File… and select “Header File” in the “Source” tab.
 
