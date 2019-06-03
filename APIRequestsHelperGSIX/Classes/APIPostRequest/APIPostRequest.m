@@ -14,6 +14,9 @@
     [self post:bodyParameters headerParameters:headerParameters endpointURL:urlPath success:success failed:failed timeout:-1];
 }
 +(void)post:(NSDictionary *)bodyParameters headerParameters:(NSDictionary *)headerParameters endpointURL:(NSString *)urlPath success:(BlockSuccess)success failed:(BlockFailed)failed timeout:(NSInteger)timeout{
+    [self post:bodyParameters headerParameters:headerParameters endpointURL:urlPath success:success failed:failed timeout:timeout removeCache:NO];
+}
++(void)post:(NSDictionary *)bodyParameters headerParameters:(NSDictionary *)headerParameters endpointURL:(NSString *)urlPath success:(BlockSuccess)success failed:(BlockFailed)failed timeout:(NSInteger)timeout removeCache:(BOOL)removeCache{
     CLog(@"POST URL: %@",urlPath);
     NSURL *URL = [NSURL URLWithString:urlPath];
     
@@ -21,6 +24,10 @@
     
     for (NSString *key in headerParameters.allKeys) {
         [request addValue:headerParameters[key] forHTTPHeaderField:key];
+    }
+    
+    if (removeCache) {
+        request.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
     }
     
     NSError *jsonError;
@@ -33,7 +40,14 @@
     
     CLog(@"POST BODY PARAMS: %@",bodyParameters);
     
-    [[NSURLSession.sharedSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    if (removeCache) {
+        config.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+        config.URLCache = nil;
+    }
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+    
+    [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if([[NSThread currentThread] isMainThread]){
             [APIRequestHelper errorHandler:error data:data response:response endpointURL:urlPath success:^(NSDictionary *response) {
                 success(response);
