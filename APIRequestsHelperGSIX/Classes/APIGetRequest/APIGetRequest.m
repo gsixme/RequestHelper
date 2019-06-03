@@ -15,6 +15,9 @@
     [self get:headerParameters endpointURL:urlPath success:success failed:failed timeout:-1];
 }
 +(void)get:(NSDictionary *)headerParameters endpointURL:(NSString *)urlPath success:(BlockSuccess)success failed:(BlockFailed)failed timeout:(NSInteger)timeout{
+    [self get:headerParameters endpointURL:urlPath success:success failed:failed timeout:-1 removeCache:NO];
+}
++(void)get:(NSDictionary *)headerParameters endpointURL:(NSString *)urlPath success:(BlockSuccess)success failed:(BlockFailed)failed timeout:(NSInteger)timeout removeCache:(BOOL)removeCache{
     CLog(@"GET URL: %@",urlPath);
     NSURL *URL = [NSURL URLWithString:urlPath];
     
@@ -23,11 +26,22 @@
         [request addValue:headerParameters[key] forHTTPHeaderField:key];
     }
     
+    if (removeCache) {
+        request.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+    }
+    
     if (timeout > 0) {
         [request setTimeoutInterval:timeout];
     }
     
-    [[NSURLSession.sharedSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    if (removeCache) {
+        config.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+        config.URLCache = nil;
+    }
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+    
+    [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if([[NSThread currentThread] isMainThread]){
             [APIRequestHelper errorHandler:error data:data response:response endpointURL:urlPath success:^(NSDictionary *response) {
                 success(response);
